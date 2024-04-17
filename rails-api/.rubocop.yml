@@ -1,6 +1,5 @@
 require:
   - 'rubocop-rails'
-  - 'rubocop-rspec'
 
 AllCops:
   TargetRubyVersion: 2.7
@@ -66,9 +65,3 @@ Metrics/ParameterLists:
 
 Metrics/PerceivedComplexity:
   Max: 15
-
-RSpec/MultipleExpectations:
-  Max: 2
-
-RSpec/ExampleLength:
-  Enabled: false
