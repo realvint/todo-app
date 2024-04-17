@@ -1,25 +1,30 @@
 development:
-  # Configure available database clients. (required)
   clients:
-    # Defines the default client. (required)
     default:
-      # Defines the name of the default database that Mongoid can connect to.
-      # (required).
       database: rails_api_development
-      # Provides the hosts the default client can connect to. Must be an array
-      # of host:port pairs. (required)
       hosts:
-        - mongo-service:27017
+        - localhost:27017
       options:
-        server_selection_timeout: 1
+        user: 'root'
+        password: 'example'
+        roles:
+          - 'dbOwner'
+        auth_mech: :scram
+        auth_source: admin
 
 test:
   clients:
     default:
       database: rails_api_test
       hosts:
-        - mongo-service:27017
+        - localhost:27017
       options:
+        user: 'root'
+        password: 'example'
+        roles:
+          - 'dbOwner'
+        auth_mech: :scram
+        auth_source: admin
         read:
           mode: :primary
         max_pool_size: 1
