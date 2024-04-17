@@ -1,0 +1,74 @@
+require:
+  - 'rubocop-rails'
+  - 'rubocop-rspec'
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: disable
+  Exclude:
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'lib/tasks/*'
+    - 'config/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: either
+
+Layout/LineLength:
+  Exclude:
+    - 'db/migrate/*.rb'
+  Max: 150
+
+Metrics/MethodLength:
+  Include:
+    - 'app/controllers/*'
+    - 'app/models/*'
+  Max: 35
+
+Metrics/AbcSize:
+  Include:
+    - 'app/controllers/*'
+    - 'app/models/*'
+  Max: 100
+
+Metrics/BlockLength:
+  Max: 42
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/ParameterLists:
+  Max: 7
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+RSpec/MultipleExpectations:
+  Max: 2
+
+RSpec/ExampleLength:
+  Enabled: false
