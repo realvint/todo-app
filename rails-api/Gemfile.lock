@@ -60,6 +60,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    base64 (0.2.0)
     bcrypt (3.1.20)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
@@ -73,8 +74,14 @@ GEM
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphql (1.13.23)
+      base64
+    graphql_playground-rails (2.1.0)
+      rails (>= 5.1.0)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
+    jwt (2.8.1)
+      base64
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -170,6 +177,9 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
+  graphql (~> 1.11, >= 1.11.1)
+  graphql_playground-rails (~> 2.1)
+  jwt (~> 2.2, >= 2.2.1)
   listen (~> 3.3)
   mongoid (~> 7.0.5)
   puma (~> 5.0)
